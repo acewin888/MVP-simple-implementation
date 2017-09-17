@@ -4,9 +4,14 @@ package com.example.android.myapplication.model;
  * Created by kevinsun on 9/17/17.
  */
 
+/**
+ * this class directly interact with User class, the third parameter of the log method reference OnLogInListener will be implemented
+ * in the presenter
+ */
 public class UserLogging implements OnLogging {
     @Override
     public void log(final String username, final String passWord, final OnlogInListener onlogInListener) {
+
         new Thread(new Runnable() {
             @Override
             public void run() {
